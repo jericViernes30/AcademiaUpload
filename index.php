@@ -9,14 +9,24 @@
     <link href="src/style.css" rel="stylesheet">
     <title>Academia Upload</title>
 </head>
-<body class="w-full min-h-screen flex bg-slate-800">
-    <div class="w-1/2">
-        <p>HELLO</p>
+<body class="w-full min-h-screen flex bg-[#faf9f6] text-sm">
+    <div class="w-1/2 flex justify-center items-center">
+        <p class="text-2xl">Welcome to <span class="font-semibold text-[#52b2bf]">Academia Upload!</span></p>
     </div>
-    <div class="w-1/2 flex items-center justify-center">
-        <div class="w-2/6 rounded-lg bg-slate-200 bg-opacity-20">
-            <p>Welcome to Academia Upload!</p>
-            <p>Login to your account</p>
+    <div class="w-1/2 flex items-center justify-center p-4">
+        <div class="w-4/5 rounded-2xl bg-white shadow-xl p-8">
+            <div class="w-full flex items-center justify-end gap-2 mb-4">
+                <p>Don't have an account?</p>
+                <button onclick="window.location.href='Views/Users/register.php'" class="py-1 rounded-md text-[#52b2bf] underline">Register</button>
+            </div>
+            <p class="font-medium mb-4">Login to your account</p>
+            <form action="Controller/UserController.php" method="POST">
+                <label for="username">Username</label>
+                <input type="text" name="username" required autocomplete="off" class="w-full px-2 py-1 outline-none rounded-md border border-[#52b2bf] mt-1 mb-3">
+                <label for="username">Password</label>
+                <input type="password" name="password" required class="w-full px-2 py-1 outline-none rounded-md border border-[#52b2bf] mt-1 mb-3">
+                <button class="w-1/4 rounded-md bg-[#52b2bf] py-1 text-white">Login</button>
+            </form>
         </div>
     </div>
 </body>
